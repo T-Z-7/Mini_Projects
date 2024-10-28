@@ -7,4 +7,8 @@ const result = numbers.filter(function(element){
     return element % 2 === 0;
 })
 
-console.log(result);
+const total = numbers.reduce(function(previous,next){
+    return previous + next;
+})
+
+console.log(total);

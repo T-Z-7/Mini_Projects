@@ -3,23 +3,30 @@
 
 
 class Product {
-    constructor(name,price){
-        this.name = name,
-        this.price = price
+    
+    
+    
+    constructor(name,type,price) {
+        this.name=name;
+        this.type=type;
+        this.price=price;
     }
 
-    displayProduct(){
-        console.log(`${this.name}:$${this.price.toFixed(2)}`)
-    }
+    display(){
+        console.log(`Name of this product is ${this.name}.The type of the ${this.name} is ${this.type}`);
+    };
 
-    totalPrices(Tax){
-        return this.price + Tax;
-    }
+   
 
+    totalCost(tax){
+        return(
+            this.price + (this.price * tax)
+        )
+    }
 }
+const tax = 0.05;
+const product1 = new Product("Marcedes" , "Car" , 20000000);
 
-const Product1 = new Product("Apple",1.99);
-console.log(Product1.displayProduct());
+const totalPrice = product1.totalCost(tax);
 
-const Total = Product1.totalPrices(0.5);
-console.log(`Total prices with Tax: ${Total.toFixed(2)}`)
+console.log(`The total price with tax is ${totalPrice}`)

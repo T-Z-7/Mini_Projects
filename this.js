@@ -2,16 +2,15 @@
 //        (The object depand on the immediate context)
 //        person.name = this.name
 
-const person1 = {
-    name : "Jack",
-    favFood :  "Burger",
-    sayHello : function(){
-        console.log(`Hello my name is ${this.name}! `)
-    },
-    eat : function(){
-        console.log(`${this.name} is eating his ${this.favFood}`)
-    },
+const car1 = {
+    name : "Lambo",
+    model : "X12B",
+    owner : "Thaw Zin",
+    releaseDate : "9/12/2028",
+    price : 2000000,
+    ai : function(){
+        console.log(`Hello Mr.${this.owner}. This model is ${this.model} and its release date is ${this.releaseDate}!`);
+    }
 }
 
-person1.sayHello();
-person1.eat();
+car1.ai();

@@ -2,31 +2,22 @@
 //         constructor function ex. static keyword, encapsulation , inheritance
 
 
-class Product {
-    
-    
-    
-    constructor(name,type,price) {
-        this.name=name;
-        this.type=type;
-        this.price=price;
+class GOAT{
+    constructor(name,team,throphy){
+           this.name = name;
+           this.team = team;
+           this.throphy = throphy;
     }
 
     display(){
-        console.log(`Name of this product is ${this.name}.The type of the ${this.name} is ${this.type}`);
-    };
-
-   
-
-    totalCost(tax){
-        return(
-            this.price + (this.price * tax)
-        )
+        console.log(`This is the GOAT of the football and his name is ${this.name}! 
+                     He played at the ${this.team} and named as a ${this.throphy}!`)
     }
+
+
 }
-const tax = 0.05;
-const product1 = new Product("Marcedes" , "Car" , 20000000);
 
-const totalPrice = product1.totalCost(tax);
+let Ronaldo = new GOAT("Christiano Ronaldo","Real Madrid","Mr.Championleague");
 
-console.log(`The total price with tax is ${totalPrice}`)
+Ronaldo.display();
+

@@ -1,13 +1,11 @@
 
-
-function sum(callback , x, y){
+function one(two,x,y){
     let result = x + y;
-    callback(result);
-
+    two(result);
 }
 
-function display(result2){
-   console.log(result2);
+function two(result2){
+    console.log(result2);
 }
 
-sum(display,1,2);
+one(two,4,5);

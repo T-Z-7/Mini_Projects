@@ -5,22 +5,14 @@
 
 
 
-const person1  = {
-    firstName : "Thaw",
-    lastName : "Zin",
+const person ={
+    firstName : 'Thaw Zin',
+    lastName : 'Min Wai',
     age : 20,
 }
 
-const person2 = {
-    firstName : "Christiano",
-    lastName : "Ronaldo",
-    age : 39,
-
+function combine({firstName,lastName,age}){
+     console.log(`Name : ${firstName} ${lastName}`);
+     console.log(`Age : ${age}`);
 }
-
-function display ({firstName,lastName,age}){
-   console.log(`Name : ${firstName} ${lastName}`);
-   console.log(`age : ${age}`)
-}
-
-display(person2)
+combine(person);

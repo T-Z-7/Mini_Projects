@@ -5,50 +5,48 @@ class Person{
         this.age = age;
     }
 
-    set firstName(newFistName){
-        if(typeof newFistName=== "string" && newFistName.length > 0){
-            this._firstName = newFistName;
-        }
-        else{
-            console.error("Name must be a strings characters")
-        }
-    }
-    set lastName(newlastName){
-            if(typeof newlastName === "string" && newlastName.length > 0){
-                this._lastName = newlastName;
-            }
-            else{
-                console.error("Name must be a strings characters")
-            }
-    }
-    set age(newAge){
-        if(typeof newAge === "number" && newAge >= 0){
-            this._age = newAge;
-        }
-        else{
-            console.error("Age must be a strings number")
-        }
+    set firstName(correctName){
+       if(typeof correctName === "string" && correctName.length > 0){
+            this._firstName=correctName;
+       }
+       else{
+         console.error("Name must be string character!");
+       }
     }
 
+    set lastName(correctName){
+        if(typeof correctName === "string" && correctName.length > 0){
+            this._lastName = correctName;
+        }
+        else{
+            console.error("Name must be string character!");
+        }
+    
+    }
+
+    set age(correctage){
+        if(typeof correctage === "number" && correctage.length > 0){
+            this._age=correctage;
+        }
+        else{
+            console.error("Age must be a Numebr!");
+        }
+    }
+    
     get firstName(){
-        return(this._firstName)
+        return this._firstName;
     }
     get lastName(){
-        return(this._lastName)
+        return this._lastName;
     }
     get age(){
-        return(this._age)
+        return this._age;
     }
 
-    get fullName(){
-        return this._firstName + "" + this._lastName;
-    }
+    
 }
 
+let person = new Person("Thaw", 23 , 32);
 
-const person1 = new Person("Thaw","Zin",20);
+console.log(person);
 
-console.log(person1.firstName);
-console.log(person1.lastName);
-console.log(person1.age);
-console.log(person1.fullName);

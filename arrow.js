@@ -1,10 +1,7 @@
-const numbers = [1,2,3,4,5,6];
+const number = [1,3,5,34,6,57,21];
 
-const square = numbers.map(
-    (element) => {
-        return Math.pow(element,2);
+let result = number.map( element => {
+    return Math.pow(element,2);
+})
 
-    }
-)
-
-console.log(square);
+console.log(result);

@@ -1,20 +1,2 @@
-body{
-    margin: 0;
-}
 
-#clock-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    
-}
-
-#clock{
-    font-family: monospace;
-    font-size: 6.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 250px ;
-}
 
